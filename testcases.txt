@@ -1,0 +1,63 @@
+>>abcd
+Unrecognised command
+>>send user1 "hello from user1 -1"
+Please login first
+>>login user1
+user1 logged in.
+>>read
+No new messages
+>>read 0
+>>read 1
+Invalid message number
+Please use following format: Read <msg number>. Specify 0 if you want to read all
+>>login user2
+user2 logged in.
+>>login user3
+user3 logged in.
+>>login user4
+user4 logged in.
+>>send user5 "hello from user4"
+you can only send to a logged in user
+>>send user1 "hello from user4 - 1"
+message sent.
+>>send user1 "hello from user4 - 2"
+message sent.
+>>reply "reply from user4"
+Please read first before reply
+>>broadcast "hello all from user4"
+message broadcast
+>>login user1
+user1 logged in. 3 new messages. Choose a number from 1 to 3 to pick the message to read. Pick 0 to read all.
+>>read
+3 new messages. Choose a number from 1 to 3 to pick the message to read. Pick 0 to read all.
+>>read 0
+From user4: hello from user4 - 1
+From user4: hello from user4 - 2
+From user4: hello all from user4
+>>read 1 
+From user4: hello from user4 - 1
+>>read4
+Unrecognised command
+>>read 4
+Invalid message number
+Please use following format: read <msg number>. Specify 0 if you want to read all
+>>read 3
+From user4: hello all from user4
+>>read 2
+From user4: hello from user4 - 2
+>>reply "reply from user1 to user4"
+message replied
+>>forward user2
+message forwarded to user2
+>>login user2
+user2 logged in. 2 new messages. Choose a number from 1 to 2 to pick the message to read. Pick 0 to read all.
+>>read 0
+From user4: hello all from user4
+From user1: hello from user4 - 2
+>>login user4
+user4 logged in. 1 new messages. Choose a number from 1 to 1 to pick the message to read. Pick 0 to read all.
+>>read 0
+From user1: reply from user1 to user4
+>>exit
+
+Process finished with exit code 0
